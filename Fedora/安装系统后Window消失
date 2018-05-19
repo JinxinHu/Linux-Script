@@ -1,0 +1,5 @@
+su
+dnf install epel-release -y  
+dnf install ntfs-3g -y  
+grub2-mkconfig -o /boot/grub2/grub.cfg  
+init 6  
