@@ -1,9 +1,19 @@
 %matlab 获得root权限
 #打开你安装matlab 的文件夹目录，一般为/usr/local/MATLAB/R2015b/bin/#
-sudo ./matlab
+$ sudo ./matlab
 
 %首先添加matlab命令
-sudo ln -s /usr/local/MATLAB/R2015b/bin/matlab /usr/local/bin/matlab
+$ sudo ln -s /usr/local/MATLAB/R2015b/bin/matlab /usr/local/bin/matlab
 
 %在终端中运行matlab代码,我们知道使用终端运行matlab能充分发挥多线程的计算能力，所以学会用终端使用matlab十分必要
-matlab -nodesktop -nosplash -r yourmatlabfile       #（前提是matlab所在的目录在你的PATH变量包含的目录中）#
+%进入m文件所在目录后，运行
+$ matlab -nodesktop -nosplash -r yourmatlabfile       #（前提是matlab所在的目录在你的PATH变量包含的目录中）#
+%只用文件名matlabfile，不能添加.m
+
+%修改.bashrc文件
+$ vim ~/.bashrc
+%添加如下：
+# Add an "mrun" alias for running matlab in the terminal.
+$ alias mrun="matlab -nodesktop -nosplash -logfile `date +%Y_%m_%d-%H_%M_%S`.log -r"
+%保存后，进入.m文件所在目录，运行
+$ mrun matlabfile
