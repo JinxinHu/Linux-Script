@@ -15,5 +15,9 @@ $ vim ~/.bashrc
 %添加如下：
 # Add an "mrun" alias for running matlab in the terminal.
 $ alias mrun="matlab -nodesktop -nosplash -logfile `date +%Y_%m_%d-%H_%M_%S`.log -r"
-%保存后，进入.m文件所在目录，运行
+%保存后
+$ source ~/.bashrc
+%或者
+$ sudo ~/.bashrc
+%进入.m文件所在目录，运行
 $ mrun matlabfile
