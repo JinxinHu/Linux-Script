@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+Name=Matlab 2015b
+Exec=/usr/local/MATLAB/R2015b/bin/matlab -desktop
+Icon=/usr/local/MATLAB/R2015b/shortcut/Matlab_Logo.png
+Type=Application
+Name[zh_CN]=Matlab_2015b
